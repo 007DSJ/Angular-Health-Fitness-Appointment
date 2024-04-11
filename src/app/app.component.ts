@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { RouterOutlet,RouterLink, Router } from '@angular/router';
 
 @Component({
