@@ -10,5 +10,11 @@ import { RouterOutlet,RouterLink, Router } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  constructor(private router : Router){}
+
+  navpage() {
+    this.router.navigate(['/place-appointment']);
+  }
   title = 'health-wellness-app';
 }
