@@ -47,7 +47,7 @@ export class PlaceFitnessAppointmnetComponent implements OnInit{
       state: ['', Validators.required],
       country: ['', Validators.required],
       pincode: ['', Validators.required],
-      phonenumber: ['', Validators.required],
+      phonenumber: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       email: ['', [Validators.required, Validators.email]],
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
