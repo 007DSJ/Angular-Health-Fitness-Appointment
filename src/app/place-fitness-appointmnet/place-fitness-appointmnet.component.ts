@@ -54,8 +54,39 @@ export class PlaceFitnessAppointmnetComponent implements OnInit{
       age: ['', Validators.required],
       trainerpreference: [''],
       physiotherapist: [''],
-      packages: ['']
+      packages: [''],
+      weeks: ['',Validators.required], //extra
+      amount: [{ value: '', disabled: true }] // Disable amount initially-extra
     });
+
+  }
+
+  ngOnChange()
+  {
+    this.fitnessForm.get('package').valueChanges.subscribe(() => this.updateAmount()); //extra
+    this.fitnessForm.get('weeks').valueChanges.subscribe(() => this.updateAmount()); //extra
+  }
+
+  updateAmount()
+  {
+    // extra
+    const packageValue = this.fitnessForm.get('package').value;
+    const weeksValue = this.fitnessForm.get('weeks').value;
+    let amount = 0;
+
+    // Calculate amount based on selected package and weeks
+    // Add logic to calculate the amount based on the selected package and weeks
+    // For demonstration, let's assume a simple calculation
+    if (packageValue === 'Package A') {
+      amount = weeksValue * 100;
+    } else if (packageValue === 'Package B') {
+      amount = weeksValue * 150;
+    } else if (packageValue === 'Package C') {
+      amount = weeksValue * 200;
+    }
+
+    // Update the amount field in the form
+    this.fitnessForm.get('amount').patchValue(amount);
   }
 
   onSubmit() {
