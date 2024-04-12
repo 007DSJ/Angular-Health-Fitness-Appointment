@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ServicesComponent } from '../services/services.component';
+import { HttpClient } from '@angular/common/http';
 
 export class Fitness {
   constructor(
@@ -19,7 +20,7 @@ export class Fitness {
     public age:number,
     public trainerpreference: string,
     public physiotherapist: string,
-    public packages: string
+    public packages: string,
   ) { }
 }
 
@@ -35,8 +36,11 @@ export class PlaceFitnessAppointmnetComponent implements OnInit{
 
   fitnessForm:any
   userService:any
+  amt!: number;
+  appointments : Fitness[]=[];
+  url = 'http://localhost:3000/appointments';
 
-  constructor(private formBuilder : FormBuilder){}
+  constructor(private formBuilder : FormBuilder, private http : HttpClient){}
 
   ngOnInit() {
     this.fitnessForm = this.formBuilder.group({
@@ -73,21 +77,26 @@ export class PlaceFitnessAppointmnetComponent implements OnInit{
     // extra
     const packageValue = this.fitnessForm.get('package').value;
     const weeksValue = this.fitnessForm.get('weeks').value;
-    let amount = 0;
+    const physio = this.fitnessForm.get('physiotherapist').value
 
     // Calculate amount based on selected package and weeks
     // Add logic to calculate the amount based on the selected package and weeks
     // For demonstration, let's assume a simple calculation
     if (packageValue === 'Package A') {
-      amount = weeksValue * 100;
+      this.amt += weeksValue * 100;
     } else if (packageValue === 'Package B') {
-      amount = weeksValue * 150;
+      this.amt += weeksValue * 150;
     } else if (packageValue === 'Package C') {
-      amount = weeksValue * 200;
+      this.amt += weeksValue * 200;
     }
 
+    if(physio===true)
+      {
+        this.amt+=200;
+      }
+
     // Update the amount field in the form
-    this.fitnessForm.get('amount').patchValue(amount);
+    this.fitnessForm.get('amount').patchValue(this.amt);
   }
 
   onSubmit() {
@@ -128,5 +137,14 @@ export class PlaceFitnessAppointmnetComponent implements OnInit{
     //     console.error('Error posting fitness data:', error);
     //   }
     // );
+
+    // this.http.post(this.url,fitness) // Replace with your actual API endpoint
+    // .subscribe((data) => {
+    //   console.log('POST Request is successful ', data);
+    // },
+    // error => {
+    //   console.log('Error', error);
+    // });
+
   }
 }

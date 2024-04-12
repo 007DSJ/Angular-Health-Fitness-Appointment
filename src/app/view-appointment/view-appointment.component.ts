@@ -34,8 +34,9 @@ export class ViewAppointmentComponent {
       .subscribe(data => {
         this.appointments = data;
         console.log(this.appointments)
+        console.log(this.appointments.length)
       });
 
-    console.log(this.appointments)
+    
   }
 }
