@@ -16,7 +16,7 @@ export class ContactUsComponent {
     this.queryForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern("^[0-9]*$")]],
+      phonenumber: ['', [Validators.required, Validators.pattern("^[0-9]*$")]],
       message: ['', [Validators.required, Validators.maxLength(200)]]
     });
   }
