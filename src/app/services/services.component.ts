@@ -11,6 +11,8 @@ export class ServicesComponent {
 
   userService()
   {
-    
+     data:{
+      
+     }
   }
 }

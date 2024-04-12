@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { ServicesComponent } from '../services/services.component';
 
 export class Fitness {
   constructor(
@@ -34,7 +34,7 @@ export class Fitness {
 export class PlaceFitnessAppointmnetComponent implements OnInit{
 
   fitnessForm:any
-  userService: any;
+  userService:any
 
   constructor(private formBuilder : FormBuilder){}
 
@@ -117,15 +117,15 @@ export class PlaceFitnessAppointmnetComponent implements OnInit{
       fitnessData.packages
     );
     
-    this.userService.postfitnessdata(fitness)
-    .subscribe(
-      (      response: any) => {
-        console.log('Fitness data posted successfully:', response);
-        this.fitnessForm.reset();
-      },
-      (      error: any) => {
-        console.error('Error posting fitness data:', error);
-      }
-    );
+    // this.userService.postfitnessdata(fitness)
+    // .subscribe(
+    //   (response: any) => {
+    //     console.log('Fitness data posted successfully:', response);
+    //     this.fitnessForm.reset();
+    //   },
+    //   (error: any) => {
+    //     console.error('Error posting fitness data:', error);
+    //   }
+    // );
   }
 }

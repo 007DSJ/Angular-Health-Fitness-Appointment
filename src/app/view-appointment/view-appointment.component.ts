@@ -28,9 +28,9 @@ export class ViewAppointmentComponent {
   }
 
   fetchAppointments() {
-    this.http.get<Appointment[]>('http://your-api-endpoint/appointments') // Replace with your actual API endpoint
-      .subscribe(data => {
-        this.appointments = data;
-      });
+    // this.http.get<Appointment[]>('http://your-api-endpoint/appointments') // Replace with your actual API endpoint
+    //   .subscribe(data => {
+    //     this.appointments = data;
+    //   });
   }
 }
