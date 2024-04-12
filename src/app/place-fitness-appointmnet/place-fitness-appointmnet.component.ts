@@ -53,9 +53,9 @@ export class PlaceFitnessAppointmnetComponent implements OnInit{
       lastname: ['', Validators.required],
       age: ['', Validators.required],
       trainerpreference: [''],
-      physiotherapist: [''],
+      physiotherapist: ['false'],
       packages: [''],
-      weeks: ['',Validators.required], //extra
+      weeks: ['2',Validators.required], //extra
       amount: [{ value: '', disabled: true }] // Disable amount initially-extra
     });
 
@@ -63,8 +63,9 @@ export class PlaceFitnessAppointmnetComponent implements OnInit{
 
   ngOnChange()
   {
-    this.fitnessForm.get('package').valueChanges.subscribe(() => this.updateAmount()); //extra
+    this.fitnessForm.get('packages').valueChanges.subscribe(() => this.updateAmount()); //extra
     this.fitnessForm.get('weeks').valueChanges.subscribe(() => this.updateAmount()); //extra
+    this.fitnessForm.get('physiotherapist').valueChanges.subscribe(() => this.updateAmount()); //extra
   }
 
   updateAmount()
