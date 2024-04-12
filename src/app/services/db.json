@@ -64,6 +64,23 @@
       "packages": "500",
       "inr": 2000,
       "paisa": 0
+    },
+    {
+      "id": "1c0c",
+      "name": "abc",
+      "age": 34,
+      "phone": "1234567891",
+      "email": "abc@gmail.com",
+      "streetaddress": "testrt",
+      "city": "testc",
+      "state": "tests",
+      "country": "testC",
+      "pincode": 139324,
+      "trainerpreference": "Female Trainer",
+      "physiotherapist": "false",
+      "packages": "300",
+      "inr": 900,
+      "paisa": 0
     }
   ]
 }

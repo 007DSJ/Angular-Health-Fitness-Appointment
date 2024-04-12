@@ -130,26 +130,7 @@ export class PlaceFitnessAppointmnetComponent implements OnInit {
     // Update the amount field in the form
     this.fitnessForm.get('amount').patchValue(amt);
       fitnessData.inr = amt;
-      const fitness = new Fitness(
-        fitnessData.id,
-        fitnessData.inr,
-        fitnessData.paisa,
-        fitnessData.streetaddress,
-        fitnessData.city,
-        fitnessData.state,
-        fitnessData.country,
-        fitnessData.pincode,
-        fitnessData.phonenumber,
-        fitnessData.email,
-        fitnessData.firstname,
-        fitnessData.lastname,
-        fitnessData.age,
-        fitnessData.trainerpreference,
-        fitnessData.physiotherapist,
-        fitnessData.packages,
-
-      );
-
+      
       const newAppointment = {
         name: fitnessData.firstname,
         age: fitnessData.age,
