@@ -1,38 +1,40 @@
 
-<div>
-   <div>Logo</div>
-   <div>
+<div class="nav-bar">
+   <div class="logo">Logo</div>
+   <br style="clear:both;"/>
+   <div class="btn-links">
       <button [routerLink]="''">HomePage</button>
       <!-- Add RouterLink to imports in app.components.ts to make it work -->
       <button [routerLink]="'place-appointment'">Place Appointment</button>
       <button [routerLink]="'view-appointment'">View Appointment</button>
       <button [routerLink]="'contact-us'">Contact Us</button>
    </div>
+   <br style="clear:both;"/>
 </div>
 <router-outlet></router-outlet>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis impedit dolores iure tempora eligendi cupiditate enim. Libero ab eligendi, corrupti, ex itaque, veritatis sunt ipsum vero quam suscipit dolor! Laudantium!</p>
 <div>
-   <div>
-    <div>
-      <button (click)="navpage()">Apply For Trainer</button>
-    </div>
-    <div>
+   <button (click)="navpage()">Apply For Trainer</button>
+ </div>
+<div>
+   <div class="footer">
+    <div class="useful-links">
       <h2>Useful Links</h2>
-      <a>HomePage</a>
-      <a>Place Appointment</a>
-      <a>View Appointments</a>
-      <a>Contact us</a>
+      <a [routerLink]="''">HomePage</a>
+      <a [routerLink]="'place-appointment'">Place Appointment</a>
+      <a [routerLink]="'view-appointment'">View Appointments</a>
+      <a [routerLink]="'contact-us'">Contact us</a>
    </div>
-   <div>
+   <div class="contact-us-home">
      <h2>Contact Us</h2>
      <p>Company Name</p>
      <p>Company Address</p>
      <p>Company Mobile</p>
      <p>Company Location</p>
    </div>
-   <div> 
-      <p>Trademark &register</p>
    </div>
+   <div class="cpy"> 
+      <p>&#169; 2021 Copywrite</p>
    </div>
 </div>
 

@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+.nav-bar{
+    overflow: hidden;
+    display: flex;
+    padding: 10px;
+}
+
+.btn-links{
+    border-inline-start: 1px solid black;
+    padding: 10px;
+}
+
+.useful-links a{
+    padding: 10px;
+    display: block;
+    border-inline-start: 1px solid black;
+    border-inline-end: 1px solid black;
+}
+
+.contact-us-home{
+    padding: 10px;
+}
+
+.footer{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cpy{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}

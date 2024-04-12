@@ -11,8 +11,18 @@ export class ServicesComponent {
 
   userService()
   {
-     data:{
-      
+     const data={
+      "streetaddress": "test",
+      "city": "test",
+      "state": "test",
+      "country": "india",
+      "pincode": 560058,
+      "trainerpreference": "Male Trainer",
+      "physiotherapist": "Yes",
+      "packages": "500",
+      "inr": 1000,
+      "paisa": 10,
+      "id": 1
      }
   }
 }
