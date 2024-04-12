@@ -11,6 +11,15 @@
       <th scope="col">Trainer Preference</th>
       <th scope="col">Phone</th>
     </tr>
+    <tr *ngFor=" let app of appointments">
+      <th scope="col">{{app.id}}</th>
+      <th scope="col">{{app.name}}</th>
+      <th scope="col">{{app.streetaddress}}</th>
+      <th scope="col">{{app.city}}</th>
+      <th scope="col">{{app.packages}}</th>
+      <th scope="col"> {{app.trainerpreference}} </th>
+      <th scope="col"> {{app.phone}} </th>
+    </tr>
   </thead>
   <tbody>
     </tbody>

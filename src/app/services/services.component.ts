@@ -25,4 +25,5 @@ export class ServicesComponent {
       "id": 1
      }
   }
+  // json-server --watch src/app/services/db.json
 }
