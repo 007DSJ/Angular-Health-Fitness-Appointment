@@ -3,22 +3,29 @@
 <table class="table table-striped" border="1px solid black">
   <thead>
     <tr>
-      <th scope="col">Sl NO</th>
+      <th scope="col">S.NO</th>
       <th scope="col">Name</th>
-      <th scope="col">Address</th>
-      <th scope="col">City</th>
-      <th scope="col">Package</th>
-      <th scope="col">Trainer Preference</th>
       <th scope="col">Phone</th>
+      <th scope="col">email</th>
+      <th scope="col">Age</th>
+      <th scope="col">Complete Address</th>
+      <th scope="col">Trainer Preference</th>
+      <th scope="col">Physio Required</th>
+      <th scope="col">Packages</th>
+      <th scope="col">Amount</th>
     </tr>
     <tr *ngFor=" let app of appointments">
       <th scope="col">{{app.id}}</th>
       <th scope="col">{{app.name}}</th>
-      <th scope="col">{{app.streetaddress}}</th>
-      <th scope="col">{{app.city}}</th>
-      <th scope="col">{{app.packages}}</th>
-      <th scope="col"> {{app.trainerpreference}} </th>
       <th scope="col"> {{app.phone}} </th>
+      <th scope="col">{{app.email}}</th>
+      <th scope="col"> {{app.age}} </th>
+      <th scope="col">{{app.streetaddress}}</th>
+      <th scope="col">{{app.trainerpreference}}</th>
+      <th scope="col"> {{app.physiotherapist}} </th>
+      <th scope="col">{{app.packages}}</th>
+      <th scope="col">{{app.inr}}</th>
+     
     </tr>
   </thead>
   <tbody>

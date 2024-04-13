@@ -10,6 +10,11 @@ interface Appointment {
   packages: string;
   trainerpreference: string;
   phone: string;
+  email: string;
+  amount:number;
+  age:number;
+  physiotherapist:string,
+  inr:string
 }
 
 @Component({
